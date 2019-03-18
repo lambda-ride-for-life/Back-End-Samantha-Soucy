@@ -24,7 +24,7 @@ exports.up = function(knex) {
         tbl
         .text('bio');
         tbl
-        .boolean("expectant mother").defaultTo(false);
+        .boolean("expectant_mother").defaultTo(false);
     });
   };
   

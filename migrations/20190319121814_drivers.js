@@ -3,13 +3,6 @@ exports.up = function(knex) {
         tbl.increments();
 
         tbl
-        .integer('user_id')
-        .unsigned()
-        .notNullable()
-        .references('id')
-        .inTable('users');
-        
-        tbl
         .string("name", 128);
         tbl
         .integer("age");

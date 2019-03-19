@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('reviews').insert([
-        {user_id: 14,
+        { driver_id: 14,
           name: 'Peter Holden',
           title: 'Nice service',
           location: 'Kampala',

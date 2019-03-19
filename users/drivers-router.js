@@ -1,6 +1,5 @@
 const router = require('express').Router();
 
-
 const knex = require('knex');
 
 const knexConfig = require('../knexfile.js')
@@ -9,7 +8,7 @@ const db = knex(knexConfig.development)
 
 
 
-//***********update/edit a driver**************/
+//***********update/edit a driver profile**************/
 
 router.put('/:id', (req, res) => {
     db('drivers')
@@ -32,7 +31,7 @@ router.put('/:id', (req, res) => {
     })
 });
 
-//*************delete a driver**************/
+//*************delete a driver profile**************/
 router.delete('/:id', (req, res) => {
   const id = req.params.id
   db('drivers')

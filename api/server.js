@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const authRouter = require('../auth/auth-router.js');
 const usersRouter = require('../users/user-router.js');
+const reviewsRouter = require("../users/reviews-router.js");
 
 
 
@@ -17,6 +18,6 @@ server.use(cors());
 
 server.use('/api/auth', authRouter);
 server.use('/api/users', usersRouter);
-
+server.use("/api/reviews", reviewsRouter)
 
 module.exports = server;

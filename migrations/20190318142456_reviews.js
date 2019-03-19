@@ -3,11 +3,11 @@ exports.up = function(knex) {
         tbl.increments();
         
         tbl
-        .integer('user_id')
+        .integer('driver_id')
         .unsigned()
         .notNullable()
         .references('id')
-        .inTable('users');
+        .inTable('drivers');
   
 
         tbl

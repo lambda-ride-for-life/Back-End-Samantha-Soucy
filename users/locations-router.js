@@ -6,12 +6,12 @@ const knexConfig = require('../knexfile.js')
 
 const db = knex(knexConfig.development)
 
-//*************returns a list of all reviews*************/
+//*************returns a list of all locations*************/
 
 router.get('/', (req, res) => {
-    db('reviews')
-    .then(reviews => {
-      res.status(200).json(reviews)
+    db('locations')
+    .then(locations => {
+      res.status(200).json(locations)
     })
     .catch(error => {
       res.status(500).json(error)

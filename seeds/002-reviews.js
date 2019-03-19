@@ -68,6 +68,41 @@ exports.seed = function(knex, Promise) {
           review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Cursus sit amet dictum sit amet. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Odio eu feugiat pretium nibh ipsum.',
           date: 'March 18rd 2019'
         },
+        { driver_id: 5,
+          name: 'Tim',
+          title: 'Nice Job',
+          location: 'Gulu',
+          review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Cursus sit amet dictum sit amet. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Odio eu feugiat pretium nibh ipsum.',
+          date: 'March 19rd 2019'
+        },
+        { driver_id: 5,
+          name: 'Tim',
+          title: 'Well Done, thank you',
+          location: 'Gulu',
+          review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Cursus sit amet dictum sit amet. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Odio eu feugiat pretium nibh ipsum.',
+          date: 'March 18rd 2019'
+        },
+        { driver_id: 6,
+          name: 'Josh',
+          title: 'Well Done, thank you',
+          location: 'Hima',
+          review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Cursus sit amet dictum sit amet. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Odio eu feugiat pretium nibh ipsum.',
+          date: 'March 18rd 2019'
+        },
+        { driver_id: 6,
+          name: 'Josh',
+          title: 'I would use him again',
+          location: 'Hima',
+          review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Cursus sit amet dictum sit amet. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Odio eu feugiat pretium nibh ipsum.',
+          date: 'March 19rd 2019'
+        },
+        { driver_id: 6,
+          name: 'Josh',
+          title: 'Thank you',
+          location: 'Hima',
+          review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Cursus sit amet dictum sit amet. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Odio eu feugiat pretium nibh ipsum.',
+          date: 'March 17rd 2019'
+        },
        
       ]);
     });

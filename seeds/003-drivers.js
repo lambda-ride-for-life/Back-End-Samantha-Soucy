@@ -37,6 +37,22 @@ exports.seed = function(knex, Promise) {
           price: 15.00,
           bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Cursus sit amet dictum sit amet. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Odio eu feugiat pretium nibh ipsum."
         },
+        {
+          name: "Tim",
+          age: 25,
+          email: "a13bc@gmail.com",
+          location: "Gulu",
+          price: 14.00,
+          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Cursus sit amet dictum sit amet. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Odio eu feugiat pretium nibh ipsum."
+        },
+        {
+          name: "Josh",
+          age: 30,
+          email: "a13bc@gmail.com",
+          location: "Hima",
+          price: 11.00,
+          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Cursus sit amet dictum sit amet. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Odio eu feugiat pretium nibh ipsum."
+        },
 
       
       ]);

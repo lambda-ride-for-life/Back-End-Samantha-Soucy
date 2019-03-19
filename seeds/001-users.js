@@ -77,6 +77,42 @@ exports.seed = function(knex, Promise) {
           location: "Bushenyi",
           expectant_mother: true
         },
+        {
+          username: "alarive0",
+          password: "pass",
+          name: "Angelina Larive",
+          age: 29,
+          email: "alarive0@merriam-webster.com",
+          location: "Bushenyi",
+          expectant_mother: true
+        },
+        {
+          username: "tpiller3",
+          password: "pass",
+          name: "Tillie Piller",
+          age: 30,
+          email: "alarive0@merriam-webster.com",
+          location: "Amuria",
+          expectant_mother: true
+        },
+        {
+          username: "adanilov5",
+          password: "pass",
+          name: "Angelika Danilov",
+          age: 25,
+          email: "adanilov5@trellian.com",
+          location: "Busembatya",
+          expectant_mother: true
+        },
+        {
+          username: "rhatliffe9",
+          password: "pass",
+          name: "Rochell Hatliffe",
+          age: 22,
+          email: "rhatliffe9@columbia.edu	",
+          location: "Elegu",
+          expectant_mother: true
+        },
       ]);
     });
 };

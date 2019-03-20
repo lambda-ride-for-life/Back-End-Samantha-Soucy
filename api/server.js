@@ -24,4 +24,8 @@ server.use("/api/reviews", reviewsRouter);
 server.use("/api/drivers", driverRouter);
 server.use("/api/locations", locationRouter);
 
+server.get("/", (req, res) => {
+    res.send("backend")
+})
+
 module.exports = server;

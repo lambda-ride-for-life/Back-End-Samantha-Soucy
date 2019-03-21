@@ -20,9 +20,9 @@ router.get('/:id', (req, res) => {
   })
 });
 
-//************user can add a new driver************/
+//************add a new driver************/
 
-router.post('/:id', (req, res) => {
+router.post('/', (req, res) => {
   db('drivers')
   .insert(req.body)
   .then(([id]) => {

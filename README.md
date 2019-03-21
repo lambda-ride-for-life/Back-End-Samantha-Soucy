@@ -5,7 +5,7 @@
 * Frontend Developer: Elan Riznis
 * Backend Developer: Samantha Soucy
 ## To use this app
-* To view deployed app, visit:https://lambda-ride-for-life.netlify.com/
+* To view deployed app, visit: https://lambda-ride-for-life.netlify.com/
 
 ## About
 * Ride for life is a service in Uganda used to help improve maternal and child survival. This service allows an expectant Mother to contact the nearest motorcycle ambulance driver in order to get them to a medical facility quickly and safely.

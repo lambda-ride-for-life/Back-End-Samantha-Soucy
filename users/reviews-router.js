@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const restricted = require('../auth/restricted-middleware.js');
 
 const knex = require('knex');
 
@@ -8,7 +9,7 @@ const db = knex(knexConfig.development)
 
 //*************returns a list of all reviews*************/
 
-router.get('/', (req, res) => {
+router.get('/', restricted, (req, res) => {
     db('reviews')
     .then(reviews => {
       res.status(200).json(reviews)

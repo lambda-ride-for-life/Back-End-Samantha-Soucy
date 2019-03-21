@@ -22,7 +22,7 @@ router.get('/', restricted, (req, res) => {
 //******all reviews for a driver with the specified id*****/
 
 
-router.get('/:id/reviews', (req, res) => {
+router.get('/:id/reviews', restricted, (req, res) => {
     const {id} = req.params
     db('reviews')
     .where("driver_id", id)
@@ -39,11 +39,30 @@ router.get('/:id/reviews', (req, res) => {
 });
 
 
+//************add a new user************/
+
+router.post('/', restricted, (req, res) => {
+  db('users')
+  .insert(req.body)
+  .then(([id]) => {
+
+    db('users')
+    .where({ id })
+    .first()
+    .then(response => {
+      res.status(200).json(response);
+    })
+  })
+  .catch(err => {
+    res.status(500).json(err);
+  })
+});
+
 
 
 //************user can add a new review************/
 
-router.post('/', (req, res) => {
+router.post('/', restricted, (req, res) => {
     db('reviews')
     .insert(req.body)
     .then(([id]) => {
@@ -62,7 +81,7 @@ router.post('/', (req, res) => {
 
 //***********update/edit a review****************/
 
-router.put('/:id', (req, res) => {
+router.put('/:id', restricted, (req, res) => {
     db('reviews')
     .where({ id: req.params.id })
     .update(req.body)
@@ -84,7 +103,7 @@ router.put('/:id', (req, res) => {
 });
 
 //*************delete a review**************/
-router.delete('/:id', (req, res) => {
+router.delete('/:id', restricted, (req, res) => {
     const id = req.params.id
     db('reviews')
     db('reviews')

@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const restricted = require('../auth/restricted-middleware.js');
 
 const knex = require('knex');
 
@@ -8,7 +9,7 @@ const db = knex(knexConfig.development)
 
 //***********get driver by indevidual id***************/
 
-router.get('/:id', (req, res) => {
+router.get('/:id', restricted, (req, res) => {
   db('drivers')
   .where({id: req.params.id})
   .first()
@@ -22,7 +23,7 @@ router.get('/:id', (req, res) => {
 
 //************add a new driver************/
 
-router.post('/', (req, res) => {
+router.post('/', restricted,(req, res) => {
   db('drivers')
   .insert(req.body)
   .then(([id]) => {
@@ -39,11 +40,9 @@ router.post('/', (req, res) => {
   })
 });
 
-
-
 //***********update/edit a driver profile**************/
 
-router.put('/:id', (req, res) => {
+router.put('/:id', restricted, (req, res) => {
     db('drivers')
     .where({ id: req.params.id })
     .update(req.body)
@@ -65,7 +64,7 @@ router.put('/:id', (req, res) => {
 });
 
 //*************delete a driver profile**************/
-router.delete('/:id', (req, res) => {
+router.delete('/:id', restricted,(req, res) => {
   const id = req.params.id
   db('drivers')
   db('drivers')

@@ -20,6 +20,25 @@ router.get('/:id', (req, res) => {
   })
 });
 
+//************add a new driver************/
+
+router.post('/', (req, res) => {
+  db('drivers')
+  .insert(req.body)
+  .then(([id]) => {
+
+    db('drivers')
+    .where({ id })
+    .first()
+    .then(response => {
+      res.status(200).json(response);
+    })
+  })
+  .catch(err => {
+    res.status(500).json(err);
+  })
+});
+
 
 
 //***********update/edit a driver profile**************/

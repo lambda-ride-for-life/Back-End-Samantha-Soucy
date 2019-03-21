@@ -43,7 +43,7 @@ router.get('/:id/reviews', (req, res) => {
 
 //************user can add a new review************/
 
-router.post('/:id', (req, res) => {
+router.post('/', (req, res) => {
     db('reviews')
     .insert(req.body)
     .then(([id]) => {

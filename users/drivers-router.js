@@ -6,6 +6,20 @@ const knexConfig = require('../knexfile.js')
 
 const db = knex(knexConfig.development)
 
+//***********get driver by indevidual id***************/
+
+router.get('/:id', (req, res) => {
+  db('drivers')
+  .where({id: req.params.id})
+  .first()
+  .then(driver => {
+    res.status(200).json(driver)
+  })
+  .catch(err => {
+    res.status(500).json(err)
+  })
+});
+
 
 
 //***********update/edit a driver profile**************/

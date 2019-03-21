@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const Drivers = require('./user-model.js');
 const restricted = require('../auth/restricted-middleware.js');
 
 const knex = require('knex');
@@ -6,6 +7,16 @@ const knex = require('knex');
 const knexConfig = require('../knexfile.js')
 
 const db = knex(knexConfig.development)
+
+//*************returns a list of all drivers*************/
+
+router.get('/', restricted, (req, res) => {
+  Drivers.find()
+    .then(drivers => {
+      res.json(drivers);
+    })
+    .catch(err => res.send(err));
+});
 
 //***********get driver by indevidual id***************/
 
